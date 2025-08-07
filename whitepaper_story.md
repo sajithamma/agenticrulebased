@@ -299,21 +299,9 @@ The future of software development is not about writing more code; it is about c
 
 **The BackAgent revolution has begun. The question is: Are you ready to be part of the story?**
 
-## 12. References
 
-[1] Vaswani, A., et al. "Attention is all you need." Advances in neural information processing systems 30 (2017).
 
-[2] Brown, T., et al. "Language models are few-shot learners." Advances in neural information processing systems 33 (2020).
-
-[3] OpenAI. "GPT-4 Technical Report." arXiv preprint arXiv:2303.08774 (2023).
-
-[4] Anthropic. "Constitutional AI: Harmlessness from AI Feedback." arXiv preprint arXiv:2212.08073 (2022).
-
-[5] Microsoft. "Microsoft 365 Copilot: Your AI assistant for work." Microsoft Blog (2023).
-
----
-
-**Authors**: [Your Name/Organization]  
-**Date**: [Current Date]  
+**Authors**: Sajith Amma  
+**Date**: 7th Aug 2025  
 **Version**: 1.0  
-**License**: [Specify License] 
+**License**: NA 
