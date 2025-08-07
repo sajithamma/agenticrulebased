@@ -1,0 +1,123 @@
+{
+    "rule_sets": {
+        "rule_set_1": {
+            "name": "HR & Attendance Policy",
+            "rules": [
+                "[ATTENDANCE] can only be [CHECK-IN] at [LOCATION] after [TIME] 08:00.",
+                "[ATTENDANCE] can only be [CHECK-OUT] before [TIME] 22:00.",
+                "[LEAVE] can only be [REQUEST] if [AMOUNT] days is less than 30.",
+                "[LEAVE] can only be [APPROVE] by [MANAGER] role users.",
+                "[EXPENSE] can only be [SUBMIT] if [AMOUNT] is less than 1000.",
+                "[EXPENSE] can only be [APPROVE] if [AMOUNT] is less than 5000."
+            ]
+        },
+        "rule_set_2": {
+            "name": "Finance & Procurement Policy",
+            "rules": [
+                "[EXPENSE] can only be [SUBMIT] if [AMOUNT] is less than 5000.",
+                "[EXPENSE] can only be [APPROVE] by [FINANCE_MANAGER] role users.",
+                "[PURCHASE] can only be [REQUEST] if [AMOUNT] is less than 10000.",
+                "[PURCHASE] can only be [APPROVE] if [VENDOR] is pre-approved.",
+                "[INVOICE] can only be [SUBMIT] if [DUE_DATE] is within 30 days.",
+                "[PAYMENT] can only be [PROCESS] if [INVOICE] is approved."
+            ]
+        },
+        "rule_set_3": {
+            "name": "IT & Security Policy",
+            "rules": [
+                "[SYSTEM_ACCESS] can only be [GRANT] if [USER_ROLE] is authorized.",
+                "[DATA_EXPORT] can only be [REQUEST] if [SENSITIVITY_LEVEL] is low.",
+                "[BACKUP] can only be [SCHEDULE] during [TIME] 02:00 to 04:00.",
+                "[SECURITY_UPDATE] can only be [DEPLOY] on [DAY] weekend.",
+                "[VPN_ACCESS] can only be [ENABLE] from [LOCATION] approved countries.",
+                "[API_ACCESS] can only be [GRANT] if [RATE_LIMIT] is configured."
+            ]
+        },
+        "rule_set_4": {
+            "name": "Project Management Policy",
+            "rules": [
+                "[TASK] can only be [ASSIGN] if [PRIORITY] is set.",
+                "[MILESTONE] can only be [CREATE] if [DEADLINE] is realistic.",
+                "[RESOURCE] can only be [ALLOCATE] if [AVAILABILITY] is confirmed.",
+                "[BUDGET] can only be [APPROVE] if [AMOUNT] is within limits.",
+                "[RISK] can only be [MITIGATE] if [IMPACT] is assessed.",
+                "[DELIVERABLE] can only be [SUBMIT] if [QUALITY_CHECK] is passed."
+            ]
+        }
+    },
+    "user_assignments": {
+        "user_1": "rule_set_1",
+        "user_2": "rule_set_2",
+        "user_3": "rule_set_3",
+        "user_4": "rule_set_4",
+        "manager_1": "rule_set_1",
+        "finance_manager": "rule_set_2",
+        "it_admin": "rule_set_3",
+        "project_manager": "rule_set_4"
+    },
+    "global_parameters": {
+        "default_location": "Office",
+        "default_timezone": "UTC",
+        "currency": "USD"
+    },
+    "feature_definitions": {
+        "ATTENDANCE": {
+            "description": "Employee attendance tracking",
+            "actions": [
+                "CHECK-IN",
+                "CHECK-OUT",
+                "VIEW_HISTORY"
+            ],
+            "parameters": [
+                "TIME",
+                "LOCATION",
+                "DATE"
+            ]
+        },
+        "EXPENSE": {
+            "description": "Expense management and approval",
+            "actions": [
+                "SUBMIT",
+                "APPROVE",
+                "REJECT",
+                "PROCESS"
+            ],
+            "parameters": [
+                "AMOUNT",
+                "CATEGORY",
+                "DATE",
+                "RECEIPT"
+            ]
+        },
+        "LEAVE": {
+            "description": "Leave request and approval",
+            "actions": [
+                "REQUEST",
+                "APPROVE",
+                "REJECT",
+                "CANCEL"
+            ],
+            "parameters": [
+                "AMOUNT",
+                "TYPE",
+                "START_DATE",
+                "END_DATE"
+            ]
+        },
+        "PURCHASE": {
+            "description": "Purchase request and approval",
+            "actions": [
+                "REQUEST",
+                "APPROVE",
+                "REJECT",
+                "ORDER"
+            ],
+            "parameters": [
+                "AMOUNT",
+                "VENDOR",
+                "ITEM",
+                "QUANTITY"
+            ]
+        }
+    }
+}
