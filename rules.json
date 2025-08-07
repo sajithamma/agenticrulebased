@@ -1,0 +1,25 @@
+{
+    "rule_sets": {
+        "rule_set_1": {
+            "name": "Rule Set #1",
+            "rules": [
+                "ATTENDANCE can only be CHECKED-IN at the project LOCATION.",
+                "CHECK-IN allowed only after 08:00.",
+                "CHECK-OUT not allowed after 22:00."
+            ]
+        },
+        "rule_set_2": {
+            "name": "Rule Set #2",
+            "rules": [
+                "ATTENDANCE can be CHECKED-IN from anywhere.",
+                "CHECK-IN allowed only after 10:00.",
+                "CHECK-OUT not allowed after 23:30."
+            ]
+        }
+    },
+    "user_assignments": {
+        "user_1": "rule_set_1",
+        "user_2": "rule_set_2"
+    },
+    "project_location": "Dubai Marina"
+}
